@@ -9,15 +9,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Build with Buildozer
-        uses: kivy/buildozer-action@v1
-        with:
-          command: buildozer -v android debug
+      - name: Build with Docker
+        run: |
+          docker run --rm -v ${{ github.workspace }}:/home/user/hostcwd kivy/buildozer:latest bash -c "cd /home/user/hostcwd && buildozer -v android debug"
+
+      - name: Fix APK Permissions
+        run: sudo chmod -R 777 bin/ || true
 
       - name: Upload APK Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: package
           path: bin/*.apk
