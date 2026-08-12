@@ -494,5 +494,5 @@ warn_on_root = 1
 #
 android.architectures = arm64-v8a
 android.ndk = 25b
-android.api = 31
+android.api = 33
 android.min_api = 21
