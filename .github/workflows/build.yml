@@ -36,4 +36,5 @@ jobs:
         buildozer -v android debug
 
     - name: Upload APK Artifact
+
     
