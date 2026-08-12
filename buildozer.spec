@@ -5,7 +5,7 @@ package.domain = org.raj
 source.include_exts = py,png,jpg,kv,atlas
 source.dir = .
 version = 0.1
-requirements = python3,kivy
+requirements = python3==3.11,kivy
 orientation = portrait
 fullscreen = 0
 android.archs = arm64-v8a
