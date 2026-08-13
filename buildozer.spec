@@ -1,4 +1,8 @@
-#[app]
+[app]
+
+# (str) Title of your application
+title = Voice Assistant
+
 title = Voice Assistant
 package.name = voiceassistant
 package.domain = org.raj
