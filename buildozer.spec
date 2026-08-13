@@ -2,8 +2,6 @@
 
 # (str) Title of your application
 title = Voice Assistant
-
-title = Voice Assistant
 package.name = voiceassistant
 package.domain = org.raj
 source.include_exts = py,png,jpg,kv,atlas
